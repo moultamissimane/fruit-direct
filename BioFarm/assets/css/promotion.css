@@ -1,44 +1,45 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-
-
-body{
+body {
     width: 100vw;
 }
 
-.header{
-    background-color: black;
+.header {
+    background-color:#051922;
     width: 100vw;
-    padding: 1.5rem ;
+    padding: 0.5rem;
     display: flex;
     justify-content: center;
+    position: fixed;
+    top: 0;
+    z-index: 1;
 }
 
-.main-menu-wrap{
+.main-menu-wrap {
     width: 1000px;
 }
 
-.header h2{
+.header h2 {
     color: blanchedalmond;
 }
 
-.header h2 a{
+.header h2 a {
     text-decoration: none;
     color: white;
 }
 
-.ul-header{
+.ul-header {
     width: 100%;
     gap: 5rem;
     display: flex;
     justify-content: center;
 }
 
-.noel{
+.noel {
     width: 100%;
     height: 775px;
     background-image: url('/assets/img/noel.png');
@@ -49,7 +50,7 @@ body{
     align-items: center;
 }
 
-.subtitle p{
+.subtitle p {
     font-size: 35px;
     font-weight: bold;
     color: #F28123;
@@ -62,15 +63,13 @@ body{
     color: white;
 }
 
-
-
-.promotion_bar{
+.promotion_bar {
     width: 100%;
     height: 398px;
     background-color: #E1E1E166;
 }
 
-.promotion_wrapper{
+.promotion_wrapper {
     width: 100%;
     padding: 3rem 8rem;
     background: rgb(255, 255, 255);
@@ -80,7 +79,7 @@ body{
     gap: 7rem;
 }
 
-.promotion_card{
+.promotion_card {
     position: relative;
     width: 354px;
     height: 481px;
@@ -88,21 +87,41 @@ body{
     padding: 3rem;
 }
 
-.card_image img{
-    mix-blend-mode: multiply;
+.card_image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.card_cart{
+.card_image img {
+    mix-blend-mode: multiply;
+    overflow: auto;
+}
+
+.content_card_promotion span {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.content_card_promotion p:nth-child(3) {
+    font-size: xx-large;
+}
+
+.card_cart {
     width: 75px;
-height: 104px;
-border-radius: 37px 0px;
-display: flex;
-justify-content: center;
-align-items: center;
-position: absolute;
-right: 0;
-bottom: 0;
-cursor: pointer;
+    height: 104px;
+    border-radius: 37px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+    outline: none;
+    border: none;
 }
 
 .card_cart i {
@@ -110,63 +129,70 @@ cursor: pointer;
     font-size: larger;
 }
 
-
-.promotion_card:nth-child(1){
+.promotion_card:nth-child(1) {
     background-color: #ff4a4c30;
 }
 
-.card_cart{
+.card_cart {
     background-color: initial;
 }
-.promotion_card:nth-child(2){
-    background-color: #D9F6C860;
-}
-.promotion_card:nth-child(3){
-    background-color: #CFE4C560;
-}
-.promotion_card:nth-child(4){
-    background-color: #FFE6DC60;
-}
-.promotion_card:nth-child(5){
-    background-color: #FFF2C560;
-}
-.promotion_card:nth-child(5){
-    background-color: #FBC2DF60;
-}
-.promotion_card:nth-child(6){
-    background-color: #FCFBD860;
-}
-.promotion_card:nth-child(7){
-    background-color: #FFF1F160;
-}
-.promotion_card:nth-child(8){
-    background-color: #FFEDE160;
-}
-.promotion_card:nth-child(9){
-    background-color: #FFE2E460;
+
+.promotion_card:nth-child(2) {
+    background-color: #499e1830;
 }
 
-.hero-text p.subtitle{
-    color:#F28123;
+.promotion_card:nth-child(3) {
+    background-color: #6fe43960;
+}
+
+.promotion_card:nth-child(4) {
+    background-color: #ff474130;
+}
+
+.promotion_card:nth-child(5) {
+    background-color: #f9fc4e30;
+}
+
+.promotion_card:nth-child(6) {
+    background-color: #ea4eff30;
+}
+
+.promotion_card:nth-child(7) {
+    background-color: #ff9d4d30;
+}
+
+.promotion_card:nth-child(8) {
+    background-color: #ff404030;
+}
+
+.promotion_card:nth-child(9) {
+    background-color: #ffa83730;
+}
+
+.hero-text p.subtitle {
+    color: #F28123;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 7px;
 }
+
 @media screen and (max-width: 602px) {
-.promotion_wrapper{
-    padding: 1rem;
-}
-
-.noel h1{
-    font-size: 30px;
-
-}
-.noel h2{
-    font-size: 1px;
-}
-
-.header .main-menu{
-    display: none;
-}
-    
+    .promotion_wrapper {
+        padding: 1rem;
+    }
+    .noel h1 {
+        font-size: 30px;
+    }
+    .noel h2 {
+        font-size: 1px;
+    }
+    .header .main-menu {
+        display: none;
+    }
+    .noel h2{
+        font-size: 30px;  
+    }
+    .subtitle p{
+        font-size: 20px;
+    }
 }

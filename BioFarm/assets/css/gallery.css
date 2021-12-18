@@ -1,44 +1,45 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-
-
-body{
+body {
     width: 100vw;
 }
 
-.header{
-    background-color: black;
+.header {
+    background-color:#051922;
     width: 100vw;
-    padding: 1.5rem ;
+    padding: 0.5rem;
     display: flex;
     justify-content: center;
+    position: fixed;
+    top: 0;
+    z-index: 1;
 }
 
-.main-menu-wrap{
+.main-menu-wrap {
     width: 1000px;
 }
 
-.header h2{
+.header h2 {
     color: blanchedalmond;
 }
 
-.header h2 a{
+.header h2 a {
     text-decoration: none;
     color: white;
 }
 
-.ul-header{
+.ul-header {
     width: 100%;
     gap: 5rem;
     display: flex;
     justify-content: center;
 }
 
-.gallery{
+.gallery {
     width: 100%;
     height: 775px;
     background-image: url('/assets/img/img gallery.jpg');
@@ -49,123 +50,196 @@ body{
     align-items: center;
 }
 
-.noel h2 {
-    font-size: 80px;
+.subtitle h1 {
+    font-size: 64px;
     font-weight: bold;
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .subtitle p {
-    font-size: 80px;
-    font-weight: bold;
+    font-size: 15px;
     color: #F28123;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-
-
-.promotion_bar{
+.card_title{
+    font-weight: bold;
+}
+.gallery_bar {
     width: 100%;
     height: 398px;
     background-color: #E1E1E166;
 }
+.reviews{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+.calcprice{
+    display: flex;
+    justify-content: space-between;
 
-.promotion_wrapper{
+}
+.content p{
+    font-size: 1.3rem;
+    gap: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2.7rem;
+
+}
+
+.control{
+    width: 10rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+    background-color: rgb(206, 206, 206);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    font-size: 2rem;
+}
+.control button{
+    border: none;
+    background: rgb(206, 206, 206);
+}
+
+.reviews i{
+    color: #F28123;
+    font-size: 2rem;
+}
+.reviews span{
+    color: gray;
+    font-size: 2rem;
+}
+
+
+.pricekg{
+    color:gray;
+    font-size: 2.3rem;
+    margin-top: 10rem;
+}
+.calcprice h3{
+    font-size: 3rem;
+    font-weight: bold ;
+}
+.card_cart{
+    cursor: pointer;
+    width: 25rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: #F28123;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    
+}
+.card_cart p{
+    padding: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.gallery_wrapper {
     width: 100%;
     padding: 3rem 8rem;
     background: rgb(255, 255, 255);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 7rem;
+    gap: 10rem;
 }
 
-.promotion_card{
-    position: relative;
-    width: 354px;
-    height: 481px;
-    border-radius: 42px;
-    padding: 3rem;
+.gallery_card {
+    width: 1372px;
+    height: 672px;
+    border-radius: 48px;
+    background: #fff;
+    box-shadow: 0px 3px 47px rgb(0, 0, 0, 0.16);
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    gap: 2rem;
 }
 
-.card_image img{
+.gallery_card .image {
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff66;
+    
+    background-position: center;
+    background-size: cover;
+}/*
+.gallery_card .image {
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff66;
+    background-image: url('/assets/img/.jpg');
+    background-position: center;
+    background-size: cover;
+}.gallery_card .image {
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff66;
+    background-image: url('/assets/img/raspberry.png');
+    background-position: center;
+    background-size: cover;
+}.gallery_card .image {
+    width: 100%;
+   /*height: 100%;
+    background-color: #ffffff66;
+    background-image: url('/assets/img/kiwi.jpg');
+    background-position: center;
+    background-size: cover;
+}*/
+
+
+
+.gallery_card .content{
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff66;
+    border-radius: 2rem;
+}
+.card_image img {
     mix-blend-mode: multiply;
 }
 
-.card_cart{
-    width: 75px;
-height: 104px;
-border-radius: 37px 0px;
-display: flex;
-justify-content: center;
-align-items: center;
-position: absolute;
-right: 0;
-bottom: 0;
-cursor: pointer;
-}
-
-.card_cart i {
-    color: white;
-    font-size: larger;
-}
-
-
-.promotion_card:nth-child(1){
-    background-color: #ff4a4c30;
-}
-
-.card_cart{
-    background-color: initial;
-}
-.promotion_card:nth-child(2){
-    background-color: #D9F6C860;
-}
-.promotion_card:nth-child(3){
-    background-color: #CFE4C560;
-}
-.promotion_card:nth-child(4){
-    background-color: #FFE6DC60;
-}
-.promotion_card:nth-child(5){
-    background-color: #FFF2C560;
-}
-.promotion_card:nth-child(5){
-    background-color: #FBC2DF60;
-}
-.promotion_card:nth-child(6){
-    background-color: #FCFBD860;
-}
-.promotion_card:nth-child(7){
-    background-color: #FFF1F160;
-}
-.promotion_card:nth-child(8){
-    background-color: #FFEDE160;
-}
-.promotion_card:nth-child(9){
-    background-color: #FFE2E460;
-}
-
-.hero-text p.subtitle{
-    color:#F28123;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 7px;
-}
 @media screen and (max-width: 602px) {
-.promotion_wrapper{
-    padding: 1rem;
-}
+    .gallery_card{
+        flex-direction: column;
+        height: max-content;
+        width: 90vw;
+        border-radius: 1rem;
+    }
 
-.noel h1{
-    font-size: 30px;
+    .card_cart{
+        width: 100%;
+    }
+    .gallery_card .image {
+       height: 30rem;
+    }
+  
+    .header .main-menu {
+        display: none;
+    }
+    .subtitle h1{
+        font-size: 30px;  
+    }
+    .subtitle h1{
+        font-size: 20px;
+    }
+    .gallery_card .content{
+        height: 50%;
+    }
 
-}
-.noel h2{
-    font-size: 1px;
-}
-
-.header .main-menu{
-    display: none;
-}
-    
-}
+}    
